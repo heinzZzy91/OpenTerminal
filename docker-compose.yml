@@ -8,7 +8,7 @@ services:
     environment:
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
     volumes:
-      - terminal-data:/app/data
+      - /home/docker/openterminal/data:/app/data
     restart: unless-stopped
 
   web:
@@ -23,5 +23,4 @@ services:
       - api
     restart: unless-stopped
 
-volumes:
-  terminal-data:
+
